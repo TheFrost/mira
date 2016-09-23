@@ -1,0 +1,413 @@
+/*Home*/
+.o-home  {
+  position relative
+  padding 1em
+  text-align center
+  background-color c_red
+  overflow hidden
+  +above(bp-medium) {
+    width 100vw
+    height 100vh
+  }
+  +above(bp-large) {
+    min-height 768px
+  }
+  &__wrapper {
+    position relative
+    z-index 10
+    width 100%
+    height 100%
+  }
+  &__bg {
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background url('../img/home-bg.png') no-repeat top center
+    background-size cover
+    opacity 0.8
+  }
+  &__inner {
+    position relative
+    display none
+    width 100%
+    max-width 850px
+    margin 0 auto
+    +above(bp-medium) {
+      display block
+      padding-top 10em
+    }
+    @media (min-height: 800px) and (min-width: bp-medium) {
+      padding-top 13.5em
+    }
+    &:hover {
+      .o-menu__item {
+        opacity 0.3
+        &--option {
+          opacity 1
+        }
+      }
+    }
+  }
+  &__character {
+    display inline-block
+    padding-left 3em
+  }
+  &__tag {
+    +above(bp-medium) {
+      position absolute
+      left 0
+      bottom 1em
+      width 100%
+    }
+    img {
+      display inline-block
+    }
+  }
+}
+
+.o-logo {
+  display inline-block
+  margin-bottom 1em
+  +above(bp-medium) {
+    position absolute
+    top 1em
+    left 50%
+    z-index 11
+    margin-left -96px
+    margin-top 0
+  }
+  &__link {
+    display block
+    width 192px
+    height 135px
+    background url('../img/logo-mira.png') no-repeat center center
+    background-size contain
+    @media (min-height: 800px) and (min-width: bp-large) {
+      height 181px
+    }
+  }
+  &__title {
+    display block
+    margin 0
+    text-indent -9999px
+  }
+}
+
+@keyframes helloTrigger {
+  to {
+    margin-right -50px
+  }
+}
+
+.o-menu {
+  position absolute
+  top 0
+  left 0
+  z-index 10
+  height 100%
+  @media (min-height: 800px) and (min-width: bp-large) {
+    top 3em
+  }
+  &__trigger {
+    position absolute
+    top 0
+    right 0
+    display block
+    width 50px
+    margin-right -50px
+    height 50px
+    font-size 2em
+    line-height 50px
+    text-align center
+    background-color c_red
+    color white
+    transition margin-right 0.6s ease-in-out
+    .fa:before {
+      content '\f0c9'
+    }
+  }
+  &--mobile {
+    position fixed
+    z-index 100
+    width calc(100% - 50px)
+    max-width 300px
+    background-color c_black
+    transform translate3d(-100%, 0, 0)
+    transition all 0.33s ease-in-out
+    +above(bp-large) {
+      display none
+    }
+    &.js-active {
+      transform translate3d(0, 0, 0)
+      .o-menu__trigger {
+        margin-right 0
+        animation helloTrigger 0.33s 0.33s both
+        .fa:before {
+          content '\f00d'
+        }
+      }
+    }
+    .o-menu {
+      &__item {
+        border-bottom 1px solid rgba(white, 0.2)
+        &:first-child {
+          .o-menu__link {
+            text-transform uppercase
+          }
+        }
+      }
+      &__link {
+        display block
+        padding 1em 0 1em 2em
+        font-size 1.3em
+      }
+    }
+  }
+  &--desktop {
+    display none
+    width 100%
+    max-height 500px
+    +above(bp-large) {
+      display block
+    }
+    .o-menu {
+      &__item {
+        position absolute
+        width 100px
+        height 133px
+        text-align center
+        background url('../img/sprite-lights-2.png')
+        transition opacity 0.6s ease-in-out
+        &--option {
+          &:hover {
+            transform rotate(0) !important
+            background-position -200px 0 !important
+            animation-name drawHover !important
+            .o-menu__link {
+              display table
+            }
+          }
+        }
+      }
+      &__link {
+        position absolute
+        top 0
+        left 0
+        z-index 10
+        display none
+        width 100%
+        height 100%
+      }
+    }
+  }
+  &__list {
+    position relative
+    z-index 10
+    background-color c_black
+  }
+  &__link {
+    color white
+    text-decoration none
+    &:hover {
+      text-decoration none
+    }
+  }
+  &__label {
+    display table-cell
+    width 100%
+    vertical-align middle
+    font-weight 300
+    line-height 1
+  }
+  &__col {
+    position relative
+    width 50%
+    height 100%
+    float left
+
+    positions = left, right // control cols
+    bgTopPosition = -665px // control sprite position
+
+    // iterate positions
+    for position in positions {
+      &--{position} {
+        .o-menu__item {
+
+          // init values for position and rotate properties of children
+          bottomValues   = 0, 15, 32, 49, 60, 69
+          leftValues = 0, 0, 5, 17, 32, 50
+          rotateValues = -80deg, -75deg, -55deg, -35deg, -25deg, -20deg
+
+          count = 0 // control position array
+          items = 1 2 3 4 5 6 // iterate limit items
+
+          // iterate children
+          for item in items {
+
+            animationName = draw + item // init value for contruct keyframe name
+
+            &:nth-child({item}) {
+              bottom: bottomValues[count] + '%'
+              {position}: leftValues[count] + '%'
+              if position is right {
+                transform: rotate(rotateValues[count] * -1)
+              } else {
+                transform: rotate(rotateValues[count])
+              }
+              background-position: 0 bgTopPosition
+              animation: animationName .2s steps(2) infinite
+            }
+            count = count + 1 // counter++
+            bgTopPosition = bgTopPosition + 133 // control sprite position
+          }
+        }
+      }
+    }
+  }
+}
+
+// create keyframes animation
+keyItems = 1 2 3 4 5 6
+posY = -665px
+for key in keyItems {
+  @keyframes draw{key} {
+    100% {
+      background-position -200px posY
+    }
+  }
+  posY = posY + 133
+}
+
+@keyframes drawHover {
+  100% {
+    background-position -400px 0
+  }
+}
+
+/*Waves*/
+.wave-style {
+  position absolute
+  top 50%
+  left 50%
+  border 2px solid lighten(c_red, 20%)
+  border-radius 50%
+  transform translate(-50%, -50%)
+  opacity 1
+}
+
+.o-wave {
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  &__item {
+    @extend .wave-style
+    &:after,
+    &:before {
+      content ''
+      @extend .wave-style
+    }
+
+    waves = 1 2 3
+    waveSize = 50px
+    for item in waves {
+      &:nth-child({item}) {
+        width waveSize
+        height waveSize
+        &:before {
+          width (waveSize - 50)
+          height (waveSize - 50)
+        }
+        &:after {
+          width (waveSize + 50)
+          height (waveSize + 50)
+        }
+      }
+      waveSize = waveSize + 150
+    }
+
+    +above(bp-medium) {
+      waves = 1 2 3
+      waveSize = 600px
+      for item in waves {
+        &:nth-child({item}) {
+          width waveSize
+          height waveSize
+          &:before {
+            width (waveSize - 100)
+            height (waveSize - 100)
+          }
+          &:after {
+            width (waveSize + 100)
+            height (waveSize + 100)
+          }
+        }
+        waveSize = waveSize + 300
+      }
+    }
+
+    +above(bp-large) {
+      waves = 1 2 3
+      waveSize = 600px
+      animationCount = 3
+      for item in waves {
+        &:nth-child({item}) {
+          width waveSize
+          height waveSize
+          animationName = wave + (animationCount - 1)
+          animation animationName 1.25s infinite cubic-bezier(0,0,1,1)
+          &:before {
+            width (waveSize - 100)
+            height (waveSize - 100)
+            animationName = wave + (animationCount - 2)
+            animation animationName 1.25s infinite cubic-bezier(0,0,1,1)
+          }
+          &:after {
+            width (waveSize + 100)
+            height (waveSize + 100)
+            animationName = wave + (animationCount)
+            animation animationName 1.25s infinite cubic-bezier(0,0,1,1)
+          }
+        }
+        animationCount = animationCount + 3
+        waveSize = waveSize + 300
+      }
+    }
+  }
+}
+
+waves = 1 2 3 4 5 6 7 8 9
+toSize = 600px
+for wave in waves {
+  @keyframes wave{wave} {
+    100% {
+      width toSize
+      height toSize
+      if wave is 9 {
+        opacity 0
+      }
+    }
+  }
+  toSize = toSize + 100
+}
+
+
+.o-overlay {
+  position fixed
+  top 0
+  left 0
+  z-index 90
+  display none
+  width 100%
+  height 100%
+  background-color rgba(black, 0.6)
+  opacity 0
+  transition opacity 0.33s ease-in-out 0.33s
+  &.js-active {
+    display block
+    opacity 1
+  }
+}

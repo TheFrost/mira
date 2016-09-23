@@ -1,0 +1,17 @@
+{
+  "name": "mira-firl-fest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "browser-sync start --server 'dist/' --files '.'",
+    "watch-css": "stylus -w dev/stylus/main.styl -o dist/css/main.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "nib": "^1.1.2",
+    "rupture": "^0.6.1"
+  }
+}

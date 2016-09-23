@@ -1,0 +1,21 @@
+{
+  "name": "mira-firl-fest",
+  "authors": [
+    "ftinoco <ftinoco@ia.com.mx>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize-css": "^4.2.0",
+    "font-awesome": "fontawesome#^4.6.3"
+  }
+}

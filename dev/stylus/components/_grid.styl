@@ -1,0 +1,24 @@
+/*Grid*/
+.o-grid {
+  height 1024px
+  &--irregular {
+    .o-grid__item {
+      width calc(100% / 3)
+      &:nth-child(1) {
+        width calc(100% / 3 * 2)
+        height calc(100% / 3 * 2)
+      }
+    }
+  }
+  &__item {
+    float left
+    display block
+    width calc(100% / 4)
+    height calc(100% / 3)
+    background-repeat no-repeat
+    background-position center center
+    background-size cover
+
+    border 1px solid black
+  }
+}
