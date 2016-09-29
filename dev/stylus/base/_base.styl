@@ -7,11 +7,30 @@ html, body {
   width 100%
   height 100%
   font-size 16px
-  font-family f_opensans_c
+  font-family f_roboto
+  color c_black-alpha
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  &:after,
+  &:before {
+    box-sizing: border-box;
+  }
+}
 
 figure {
   margin 0
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family f_opensans_c
+  color c_black
+}
+
+a {
+  text-decoration none
+  &:hover {
+    text-decoration none
+  }
 }

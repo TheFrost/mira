@@ -1,24 +1,209 @@
 /*Grid*/
 .o-grid {
-  height 1024px
+  padding 0 1em
+  +above(bp-medium) {
+    height 1024px
+    padding 0
+  }
   &--irregular {
     .o-grid__item {
-      width calc(100% / 3)
       &:nth-child(1) {
-        width calc(100% / 3 * 2)
-        height calc(100% / 3 * 2)
+        +above(bp-medium) {
+          width 50%
+          height calc(100% / 3 * 2)
+        }
+        .o-grid__title {
+          +above(bp-large) {
+            font-size 2em
+          }
+        }
       }
     }
   }
   &__item {
+    position relative
     float left
     display block
-    width calc(100% / 4)
-    height calc(100% / 3)
+    width 100%
+    height 400px
+    margin-bottom 1em
     background-repeat no-repeat
     background-position center center
     background-size cover
 
-    border 1px solid black
+    +above(bp-medium) {
+      width calc(100% / 4)
+      height calc(100% / 3)
+      margin-bottom 0
+      border 1px solid c_blue_base
+
+      &--video {
+        width 50%
+      }
+    }
+
+    &--loadmore {
+      background-color rgba(black, 0.1)
+      transition all 0.2s ease-in-out
+      &:hover {
+        background-color rgba(black, 0.4)
+      }
+      .o-grid {
+        &__caption {
+          height 100%
+          left 0
+          top 0
+          text-align center
+          background none !important
+          .fa {
+            @extend .u-btn-circle-bordered
+            margin-bottom 0.5em
+            color currentColor
+            border-color currentColor
+          }
+        }
+        &__loadmore {
+          position absolute
+          top 50%
+          left 50%
+          transform translate(-50%, -50%)
+        }
+      }
+    }
+  }
+  &__loadtext {
+    display block
+  }
+  &__caption {
+    position absolute
+    left 0
+    bottom 0
+    width 100%
+    padding 1em
+    color white
+    background linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%)
+  }
+  &__title {
+    margin-top 0
+    margin-bottom 0.5em
+    font-size 1.5em
+    letter-spacing: 1px
+  }
+  &__excerpt {
+    display none
+    margin-top 0
+    +above(bp-medium) {
+      display block
+    }
+  }
+  &__seemore {
+    float right
+    color currentColor
+    &:before {
+      content '\f067'
+      @extend .u-btn-circle-bordered
+      vertical-align middle
+      margin-right 0.2em
+      font-family FontAwesome
+      color c_red
+      border-color c_red
+    }
+  }
+
+  // Social links style in grid
+  .o-social__link {
+    color currentColor
+    border-color currentColor
+  }
+}
+
+/*Home grid styles*/
++above(bp-medium) {
+  .o-main--home {
+    .o-grid {
+      .o-grid__item {
+        width calc(100% / 3)
+      }
+      &--irregular {
+        .o-grid__item {
+          &:nth-child(1) {
+            width calc(100% / 3 * 2)
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*billboard grid styles*/
+.o-grid--billboard {
+  .o-grid {
+    &__item {
+      &:hover {
+        .o-grid__caption {
+          opacity 1
+        }
+      }
+    }
+    &__caption {
+      position absolute
+      top 0
+      left 0
+      display table
+      width 100%
+      height 100%
+      background rgba(c_red, 0.8)
+      text-align center
+      opacity 0
+      transition all 0.2s ease-in-out
+
+      &-inner {
+        display table-cell
+        vertical-align middle
+      }
+    }
+    &__title {
+      font-weight 300
+      margin-bottom 2em
+    }
+    &__meta {
+      &-list {
+        font-family f_opensans_c
+        font-weight 300
+        font-size 1.5em
+      }
+      &-label {
+        color c_wine
+      }
+      &-icon {
+        display block
+        margin-top 0.5em
+        font-size 2em
+      }
+    }
+  }
+}
+
+
+/*Gallery styles and photoswipe personalization*/
+
+/*Photoswipe personalization*/
+.pswp__caption {
+  bottom 1em
+}
+.pswp__caption__center {
+  position relative
+  font-size 1em
+  color white
+  &:after {
+    content ''
+    position absolute
+    bottom 0
+    left 10px
+    display block
+    width 50%
+    height 5px
+    background-color c_red
   }
 }

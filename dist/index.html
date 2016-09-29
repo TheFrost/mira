@@ -6,10 +6,15 @@
   <title>Mira Film Fest</title>
 
   <!-- libs -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Roboto:400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
 
+  <!-- Photoswipe -->
+  <link rel="stylesheet" href="bower_components/photoswipe/dist/photoswipe.css">
+  <link rel="stylesheet" href="bower_components/photoswipe/dist/default-skin/default-skin.css">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -120,30 +125,622 @@
   <!-- // end Home -->
 
   <!-- Main container -->
-  <main class="o-main o-main--home">
-    <section class="o-main__content">
-      <div class="o-grid o-grid--irregular o-grid--post u-cf">
-        <article class="o-grid__item" style="background-image: url(https://placeholdit.imgix.net/~text?txtsize=85&txt=1024%C3%97768&w=1024&h=768)">
+  <!-- <main class="o-main o-main--home"> -->
+  <!-- <main class="o-main o-main--billboard"> -->
+  <main class="o-main o-main--single">
+    <div class="o-main__inner u-cf">
+      <section class="o-content">
 
-        </article>
-        <article class="o-grid__item" style="background-image: url(https://placeholdit.imgix.net/~text?txtsize=85&txt=1024%C3%97768&w=1024&h=768)">
+        <!-- Grid posts template -->
+        <div class="o-grid o-grid--irregular o-grid--post u-cf" style="display:none;">
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-3.jpg)">
+            <div class="o-grid__caption">
+              <header class="o-grid__head">
+                <h1 class="o-grid__title">Registra tu largometraje o cortometraje al MIRA FILM FEST</h1>
+              </header>
+              <p class="o-grid__excerpt">En su primera edición, los invitamos a consultar las bases y condiciones para registrarse en nuestro Concurso de Cortometrajes, bajo la temática: “Derechos Humanos...</p>
+              <footer class="o-grid__actions u-cf">
+                <a href="#" class="o-social__link">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="o-social__link">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
 
-        </article>
-        <article class="o-grid__item" style="background-image: url(https://placeholdit.imgix.net/~text?txtsize=85&txt=1024%C3%97768&w=1024&h=768)">
+                <a href="#" class="o-grid__seemore">Ver más...</a>
+              </footer>
+            </div>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-6.jpg)">
+            <div class="o-grid__caption">
+              <header class="o-grid__head">
+                <h1 class="o-grid__title">Registra tu largometraje o cortometraje al MIRA FILM FEST</h1>
+              </header>
+              <footer class="o-grid__actions u-cf">
+                <a href="#" class="o-social__link">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="o-social__link">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
 
-        </article>
-        <article class="o-grid__item" style="background-image: url(https://placeholdit.imgix.net/~text?txtsize=85&txt=1024%C3%97768&w=1024&h=768)">
+                <a href="#" class="o-grid__seemore">Ver más...</a>
+              </footer>
+            </div>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-9.jpg)">
+            <div class="o-grid__caption">
+              <header class="o-grid__head">
+                <h1 class="o-grid__title">Registra tu largometraje o cortometraje al MIRA FILM FEST</h1>
+              </header>
+              <footer class="o-grid__actions u-cf">
+                <a href="#" class="o-social__link">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="o-social__link">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
 
-        </article>
-        <article class="o-grid__item" style="background-image: url(https://placeholdit.imgix.net/~text?txtsize=85&txt=1024%C3%97768&w=1024&h=768)">
+                <a href="#" class="o-grid__seemore">Ver más...</a>
+              </footer>
+            </div>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-5.jpg)">
+            <div class="o-grid__caption">
+              <header class="o-grid__head">
+                <h1 class="o-grid__title">Registra tu largometraje o cortometraje al MIRA FILM FEST</h1>
+              </header>
+              <footer class="o-grid__actions u-cf">
+                <a href="#" class="o-social__link">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="o-social__link">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
 
-        </article>
-        <article class="o-grid__item" style="background-image: url(https://placeholdit.imgix.net/~text?txtsize=85&txt=1024%C3%97768&w=1024&h=768)">
+                <a href="#" class="o-grid__seemore">Ver más...</a>
+              </footer>
+            </div>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-8.jpg)">
+            <div class="o-grid__caption">
+              <header class="o-grid__head">
+                <h1 class="o-grid__title">Registra tu largometraje o cortometraje al MIRA FILM FEST</h1>
+              </header>
+              <footer class="o-grid__actions u-cf">
+                <a href="#" class="o-social__link">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="o-social__link">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
 
-        </article>
-      </div>
-    </section>
-    <aside class="o-main__sidebar"></aside>
+                <a href="#" class="o-grid__seemore">Ver más...</a>
+              </footer>
+            </div>
+          </article>
+          <a href="#" class="o-grid__item o-grid__item--loadmore">
+            <span class="o-grid__caption">
+              <span class="o-grid__loadmore">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <span class="o-grid__loadtext">Más artículos</span>
+              </span>
+            </span>
+          </a>
+        </div>
+        <!-- // end Grid posts template -->
+
+        <!-- Grid billboard -->
+        <div class="o-grid o-grid--billboard u-cf" style="display:none;">
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-3.jpg)">
+            <a href="#" class="o-grid__caption">
+              <span class="o-grid__caption-inner">
+                <span class="o-grid__head">
+                  <h1 class="o-grid__title">Lo and Behold, Reveries of the Connected World</h1>
+                </span>
+                <ul class="o-grid__meta-list u-listnostyle">
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">País:</span>
+                    <span class="o-grid__meta-val">Reino Unido</span>
+                  </li>
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">Duración:</span>
+                    <span class="o-grid__meta-val">90 minutos</span>
+                    <i class="fa fa-clock-o o-grid__meta-icon" aria-hidden="true"></i>
+                  </li>
+                </ul>
+              </span>
+            </a>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-3.jpg)">
+            <a href="#" class="o-grid__caption">
+              <span class="o-grid__caption-inner">
+                <span class="o-grid__head">
+                  <h1 class="o-grid__title">Lo and Behold, Reveries of the Connected World</h1>
+                </span>
+                <ul class="o-grid__meta-list u-listnostyle">
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">País:</span>
+                    <span class="o-grid__meta-val">Reino Unido</span>
+                  </li>
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">Duración:</span>
+                    <span class="o-grid__meta-val">90 minutos</span>
+                    <i class="fa fa-clock-o o-grid__meta-icon" aria-hidden="true"></i>
+                  </li>
+                </ul>
+              </span>
+            </a>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-3.jpg)">
+            <a href="#" class="o-grid__caption">
+              <span class="o-grid__caption-inner">
+                <span class="o-grid__head">
+                  <h1 class="o-grid__title">Lo and Behold, Reveries of the Connected World</h1>
+                </span>
+                <ul class="o-grid__meta-list u-listnostyle">
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">País:</span>
+                    <span class="o-grid__meta-val">Reino Unido</span>
+                  </li>
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">Duración:</span>
+                    <span class="o-grid__meta-val">90 minutos</span>
+                    <i class="fa fa-clock-o o-grid__meta-icon" aria-hidden="true"></i>
+                  </li>
+                </ul>
+              </span>
+            </a>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-3.jpg)">
+            <a href="#" class="o-grid__caption">
+              <span class="o-grid__caption-inner">
+                <span class="o-grid__head">
+                  <h1 class="o-grid__title">Lo and Behold, Reveries of the Connected World</h1>
+                </span>
+                <ul class="o-grid__meta-list u-listnostyle">
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">País:</span>
+                    <span class="o-grid__meta-val">Reino Unido</span>
+                  </li>
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">Duración:</span>
+                    <span class="o-grid__meta-val">90 minutos</span>
+                    <i class="fa fa-clock-o o-grid__meta-icon" aria-hidden="true"></i>
+                  </li>
+                </ul>
+              </span>
+            </a>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-3.jpg)">
+            <a href="#" class="o-grid__caption">
+              <span class="o-grid__caption-inner">
+                <span class="o-grid__head">
+                  <h1 class="o-grid__title">Lo and Behold, Reveries of the Connected World</h1>
+                </span>
+                <ul class="o-grid__meta-list u-listnostyle">
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">País:</span>
+                    <span class="o-grid__meta-val">Reino Unido</span>
+                  </li>
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">Duración:</span>
+                    <span class="o-grid__meta-val">90 minutos</span>
+                    <i class="fa fa-clock-o o-grid__meta-icon" aria-hidden="true"></i>
+                  </li>
+                </ul>
+              </span>
+            </a>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-3.jpg)">
+            <a href="#" class="o-grid__caption">
+              <span class="o-grid__caption-inner">
+                <span class="o-grid__head">
+                  <h1 class="o-grid__title">Lo and Behold, Reveries of the Connected World</h1>
+                </span>
+                <ul class="o-grid__meta-list u-listnostyle">
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">País:</span>
+                    <span class="o-grid__meta-val">Reino Unido</span>
+                  </li>
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">Duración:</span>
+                    <span class="o-grid__meta-val">90 minutos</span>
+                    <i class="fa fa-clock-o o-grid__meta-icon" aria-hidden="true"></i>
+                  </li>
+                </ul>
+              </span>
+            </a>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-3.jpg)">
+            <a href="#" class="o-grid__caption">
+              <span class="o-grid__caption-inner">
+                <span class="o-grid__head">
+                  <h1 class="o-grid__title">Lo and Behold, Reveries of the Connected World</h1>
+                </span>
+                <ul class="o-grid__meta-list u-listnostyle">
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">País:</span>
+                    <span class="o-grid__meta-val">Reino Unido</span>
+                  </li>
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">Duración:</span>
+                    <span class="o-grid__meta-val">90 minutos</span>
+                    <i class="fa fa-clock-o o-grid__meta-icon" aria-hidden="true"></i>
+                  </li>
+                </ul>
+              </span>
+            </a>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-3.jpg)">
+            <a href="#" class="o-grid__caption">
+              <span class="o-grid__caption-inner">
+                <span class="o-grid__head">
+                  <h1 class="o-grid__title">Lo and Behold, Reveries of the Connected World</h1>
+                </span>
+                <ul class="o-grid__meta-list u-listnostyle">
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">País:</span>
+                    <span class="o-grid__meta-val">Reino Unido</span>
+                  </li>
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">Duración:</span>
+                    <span class="o-grid__meta-val">90 minutos</span>
+                    <i class="fa fa-clock-o o-grid__meta-icon" aria-hidden="true"></i>
+                  </li>
+                </ul>
+              </span>
+            </a>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-3.jpg)">
+            <a href="#" class="o-grid__caption">
+              <span class="o-grid__caption-inner">
+                <span class="o-grid__head">
+                  <h1 class="o-grid__title">Lo and Behold, Reveries of the Connected World</h1>
+                </span>
+                <ul class="o-grid__meta-list u-listnostyle">
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">País:</span>
+                    <span class="o-grid__meta-val">Reino Unido</span>
+                  </li>
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">Duración:</span>
+                    <span class="o-grid__meta-val">90 minutos</span>
+                    <i class="fa fa-clock-o o-grid__meta-icon" aria-hidden="true"></i>
+                  </li>
+                </ul>
+              </span>
+            </a>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-3.jpg)">
+            <a href="#" class="o-grid__caption">
+              <span class="o-grid__caption-inner">
+                <span class="o-grid__head">
+                  <h1 class="o-grid__title">Lo and Behold, Reveries of the Connected World</h1>
+                </span>
+                <ul class="o-grid__meta-list u-listnostyle">
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">País:</span>
+                    <span class="o-grid__meta-val">Reino Unido</span>
+                  </li>
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">Duración:</span>
+                    <span class="o-grid__meta-val">90 minutos</span>
+                    <i class="fa fa-clock-o o-grid__meta-icon" aria-hidden="true"></i>
+                  </li>
+                </ul>
+              </span>
+            </a>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-3.jpg)">
+            <a href="#" class="o-grid__caption">
+              <span class="o-grid__caption-inner">
+                <span class="o-grid__head">
+                  <h1 class="o-grid__title">Lo and Behold, Reveries of the Connected World</h1>
+                </span>
+                <ul class="o-grid__meta-list u-listnostyle">
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">País:</span>
+                    <span class="o-grid__meta-val">Reino Unido</span>
+                  </li>
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">Duración:</span>
+                    <span class="o-grid__meta-val">90 minutos</span>
+                    <i class="fa fa-clock-o o-grid__meta-icon" aria-hidden="true"></i>
+                  </li>
+                </ul>
+              </span>
+            </a>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-3.jpg)">
+            <a href="#" class="o-grid__caption">
+              <span class="o-grid__caption-inner">
+                <span class="o-grid__head">
+                  <h1 class="o-grid__title">Lo and Behold, Reveries of the Connected World</h1>
+                </span>
+                <ul class="o-grid__meta-list u-listnostyle">
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">País:</span>
+                    <span class="o-grid__meta-val">Reino Unido</span>
+                  </li>
+                  <li class="o-grid__meta-item">
+                    <span class="o-grid__meta-label">Duración:</span>
+                    <span class="o-grid__meta-val">90 minutos</span>
+                    <i class="fa fa-clock-o o-grid__meta-icon" aria-hidden="true"></i>
+                  </li>
+                </ul>
+              </span>
+            </a>
+          </article>
+        </div>
+        <!-- // end Grid billboard -->
+
+        <!-- Grid gallery -->
+        <div class="o-grid o-grid--irregular o-grid--gallery u-cf" style="display:none;">
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-3.jpg)">
+            <div class="o-grid__caption">
+              <header class="o-grid__head">
+                <h1 class="o-grid__title">Registra tu largometraje o cortometraje al MIRA FILM FEST</h1>
+              </header>
+            </div>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-6.jpg)">
+            <div class="o-grid__caption">
+              <header class="o-grid__head">
+                <h1 class="o-grid__title">Registra tu largometraje o cortometraje al MIRA FILM FEST</h1>
+              </header>
+            </div>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-9.jpg)">
+            <div class="o-grid__caption">
+              <header class="o-grid__head">
+                <h1 class="o-grid__title">Registra tu largometraje o cortometraje al MIRA FILM FEST</h1>
+              </header>
+            </div>
+          </article>
+          <article class="o-grid__item o-grid__item--video" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-5.jpg)">
+            <div class="o-grid__caption">
+              <header class="o-grid__head">
+                <h1 class="o-grid__title">Registra tu largometraje o cortometraje al MIRA FILM FEST</h1>
+              </header>
+            </div>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-8.jpg)">
+            <div class="o-grid__caption">
+              <header class="o-grid__head">
+                <h1 class="o-grid__title">Registra tu largometraje o cortometraje al MIRA FILM FEST</h1>
+              </header>
+            </div>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-8.jpg)">
+            <div class="o-grid__caption">
+              <header class="o-grid__head">
+                <h1 class="o-grid__title">Registra tu largometraje o cortometraje al MIRA FILM FEST</h1>
+              </header>
+            </div>
+          </article>
+          <article class="o-grid__item" style="background-image: url(http://lorempixel.com/output/people-q-c-1024-768-8.jpg)">
+            <div class="o-grid__caption">
+              <header class="o-grid__head">
+                <h1 class="o-grid__title">Registra tu largometraje o cortometraje al MIRA FILM FEST</h1>
+              </header>
+            </div>
+          </article>
+          <a href="#" class="o-grid__item o-grid__item--loadmore">
+            <span class="o-grid__caption">
+              <span class="o-grid__loadmore">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <span class="o-grid__loadtext">Más artículos</span>
+              </span>
+            </span>
+          </a>
+        </div>
+        <!-- // end Grid gallery -->
+
+        <!-- Single post -->
+        <div class="o-single u-cf" style="display:none;">
+
+          <!-- Single Cover picture -->
+          <div class="o-single__cover" style="background-image:url(http://lorempixel.com/output/people-q-c-1024-768-3.jpg)"></div>
+          <!-- // end Single Cover picture -->
+
+          <div class="o-single__inner">
+            <header class="o-single__header">
+              <h1 class="o-single__title">Bienvenido al MIRA FILM FEST</h1>
+              <span class="o-single__author">Lorena Fabiola Guillé-Laris</span>
+              <span class="o-single__job">Fundadora y Directora General del MIRA FILM FEST, Consciencia en el Cine Directora Ejecutiva de Fundación Cinépolis®</span>
+            </header>
+
+            <!-- Single Body -->
+            <section class="o-single__body u-pull-left">
+              <p><em>MIRA FILM FEST</em>, Consciencia en el Cine, es una iniciativa de <b>Fundación Cinépolis</b>® que anualmente promueve en Sala de Arte de Cinépolis® la exhibición de largometrajes y cortometrajes sobre temáticas globales y socialmente relevantes, con la intención de conectar realidades, generar reflexión y contribuir con humanismo al bienestar social.</p>
+
+              <p>Nuestra misión es contribuir al bienestar social y a generar una mayor conciencia colectiva a través del cine, abordando temáticas globales y socialmente relevantes. MIRA FILM FEST, a su vez, representa la evolución del Festival Internacional Cine y Foro de Derechos Humanos de México DHFest®, que hasta su última edición en 2014 (séptima edición) habilitó la plataforma del cine para impulsar una cultura de entendimiento, promoción y respeto de los derechos humanos y nos permitió acercar estos derechos a miles de jóvenes en nuestro país.</p>
+
+              <p>Hasta estas primeras siete ediciones, te compartimos los resultados alcanzados:</p>
+
+              <ul>
+                <li><b>114 largometrajes y 35 cortos exhibidos</b>, provenientes de México y 21 países.</li>
+                <li><b>Más de 6 mil asistentes</b> a las funciones de cine y eventos especiales.</li>
+                <li>Se aliaron al festival más de 80 organizaciones del sector social, gubernamental, empresarial y multilateral, así como las embajadas de Francia, Finlandia, Suiza, Unión Europea, España, Alemania y Estados Unidos.</li>
+                <li><b>40 personas destacadas</b> de mundos como el cine, el periodismo, los derechos humanos, el activismo y la responsabilidad social fungieron como jurado.</li>
+                <li><b>Invitados</b> como Zenani Mandela, Chaz Bono, Rithy Panh, Christopher Senyonjo, Carmen Aristegui, Isabelle Gattiker nos honraron con su presencia.</li>
+                <li>Se contó con un consejo asesor con personalidades de la talla de Daniela Michel, Emilio Álvarez Icaza, Amérigo Incalcaterra, Santiago Corcuera, Mariclaire Acosta, Roberto Cuéllar y Miguel Rivera.</li>
+              </ul>
+
+              <img src="http://lorempixel.com/output/people-q-c-1024-480-1.jpg" alt="">
+
+              <p>Estamos seguros de que el MIRA FILM FEST dejará muy buen sabor de boca, ya que nos permitirá llevar a un segundo nivel la gran historia que hemos venido construyendo desde hace ocho años a favor del desarrollo social de México y de una sociedad más humana, consciente e incluyente, aprovechando la capacidad instalada de nuestra casa <b>Cinépolis</b>® y nuestro gran amor por el cine.</p>
+            </section>
+            <!-- // end Single Body -->
+
+            <!-- Single Sidebar -->
+            <aside class="o-single__sidebar u-pull-left">
+              <div class="o-single__social u-cf">
+                <a href="#" class="o-single__social-link o-single__social-link--facebook">Compartir</a>
+                <a href="#" class="o-single__social-link o-single__social-link--twitter">Compartir</a>
+              </div>
+              <div class="o-single__featured">
+                <a href="#" class="o-single__featured-item">Registra tu largometraje o cortometraje.</a>
+                <a href="#" class="o-single__featured-item">Cortometrajes internacionales</a>
+                <a href="#" class="o-single__featured-item">Drechos humanos y dignificación...</a>
+              </div>
+
+              <!-- Ad -->
+              <div class="o-ad">
+                <img src="https://placeholdit.imgix.net/~text?txtsize=23&txt=This+is+an+Ad&w=90&h=728"  class="u-imgresponsive" alt="">
+              </div>
+              <!-- // end Ad -->
+
+            </aside>
+            <!-- // end Single Sidebar -->
+
+          </div>
+        </div>
+        <!-- // end Single post -->
+
+        <!-- About view -->
+        <div class="o-single u-cf">
+
+          <!-- Single Cover picture -->
+          <div class="o-single__cover" style="background-image:url(http://lorempixel.com/output/people-q-c-1024-768-3.jpg)"></div>
+          <!-- // end Single Cover picture -->
+
+          <div class="o-single__inner">
+            <header class="o-single__header">
+              <h1 class="o-single__title">Bienvenido al MIRA FILM FEST</h1>
+              <span class="o-single__author">Lorena Fabiola Guillé-Laris</span>
+              <span class="o-single__job">Fundadora y Directora General del MIRA FILM FEST, Consciencia en el Cine Directora Ejecutiva de Fundación Cinépolis®</span>
+            </header>
+
+            <!-- Single Body -->
+            <section class="o-single__body u-pull-left">
+              <h1>¡Hola!</h1>
+
+              <p>Bienvenidos y bienvenidas sean al <b>Sitio Oficial de MIRA FILM FEST</b>®; <em>Consciencia en el cine</em> 1er edición: <em>“Imágenes que abren mentes”</em></p>
+
+              <p><em>MIRA FILM FEST</em>, Consciencia en el Cine, es una iniciativa de <b>Fundación Cinépolis</b>® que anualmente promueve en Sala de Arte de Cinépolis® la exhibición de largometrajes y cortometrajes sobre temáticas globales y socialmente relevantes, con la intención de conectar realidades, generar reflexión y contribuir con humanismo al bienestar social.</p>
+
+              <p>Nuestra misión es contribuir al bienestar social y a generar una mayor conciencia colectiva a través del cine, abordando temáticas globales y socialmente relevantes.</p>
+
+              <p>MIRA FILM FEST, a su vez, representa la evolución del Festival Internacional Cine y Foro de Derechos Humanos de México DHFest®, que hasta su última edición en 2014 -7<sup>a</sup> Edición- habilitó la plataforma del cine para impulsar una cultura de entendimiento, promoción y respeto de los derechos humanos y nos permitió acercar estos derechos a miles de jóvenes en nuestro país.</p>
+
+              <p>A siete ediciones, te compartimos los resultados alcanzados:</p>
+
+              <ul>
+                <li><b>114 largometrajes y 35 cortos exhibidos</b>, provenientes de México y 21 países.</li>
+                <li><b>Más de 6 mil asistentes</b> a las funciones de cine y eventos especiales.</li>
+                <li><b>Más de 80 organizaciones</b> del sector social, gubernamental, empresarial y multilateral, así como las Embajadas de Francia, Finlandia, Suiza, Unión Europea, España, Alemania y Estados Unidos, se aliaron al Festival.</li>
+                <li><b>40 personas destacadas</b> de mundos como el cine, el periodismo, los derechos humanos, el activismo y la responsabilidad social fungieron como jurado.</li>
+                <li><b>Invitados</b> como Zenani Mandela, Chaz Bono, Rithy Panh, Christopher Senyonjo, Carmen Aristegui, Isabelle Gattiker nos honraron con su presencia.</li>
+                <li>Contó con un consejo asesor con personalidades de la talla de Daniela Michel, Emilio Álvarez Icaza, Amérigo Incalcaterra, Santiago Corcuera, Mariclaire Acosta, Roberto Cuéllar y Miguel Rivera.</li>
+              </ul>
+
+              <img src="http://lorempixel.com/output/people-q-c-1024-480-1.jpg" alt="">
+
+              <p>Orgullosos de estos resultados, y cada vez más convencidos del poder del cine para incidir en la transformación de la sociedad abriendo mentes y detonando consciencia a través de las imágenes, es que decidimos evolucionar este festival a <b>MIRA FILM FEST</b>®; Consciencia en el cine.</p>
+
+              <p>En su primera edición; bajo la temática <em>“Derechos Humanos y Dignificación Humana”</em>; hemos generado la convocatoria de nuestro concurso de cortometrajes mexicanos donde reconoceremos los mejores proyectos en 2 categorías: </p>
+
+              <ol type="1">
+                <li>Para el <b>CORTOMETRAJE DOCUMENTAL EN DESARROLLO</b>: La entrega de la cantidad de $20,000 (Veinte mil pesos 00/100 M.N.). Apoyo con un menthorship, quien será un experto de la industria del cine designado por el organizador del concurso para apoyar con asesoría en la realización del documental.</li>
+                <li>Para el <b>CORTOMETRAJE DOCUMENTAL TERMINADO</b>: La entrega de la cantidad de $50,000 (Cincuenta mil pesos 00/100 M.N.)</li>
+              </ol>
+
+              <p>Estamos seguros de que el MIRA FILM FEST dejará "muy buen sabor de boca", ya que nos permitirá llevar a un segundo nivel la gran historia que hemos venido construyendo desde hace ocho años a favor del desarrollo social de México y de una sociedad más humana, consciente e incluyente, aprovechando la capacidad instalada de nuestra casa <b>Cinépolis</b>® y nuestro gran amor por el cine.</p>
+            </section>
+            <!-- // end Single Body -->
+
+            <!-- Single Sidebar -->
+            <aside class="o-single__sidebar u-pull-left">
+              <div class="o-single__social u-cf">
+                <a href="#" class="o-single__social-link o-single__social-link--facebook">Compartir</a>
+                <a href="#" class="o-single__social-link o-single__social-link--twitter">Compartir</a>
+              </div>
+              <div class="o-single__featured">
+                <a href="#" class="o-single__featured-item">Registra tu largometraje o cortometraje.</a>
+                <a href="#" class="o-single__featured-item">Cortometrajes internacionales</a>
+                <a href="#" class="o-single__featured-item">Drechos humanos y dignificación...</a>
+              </div>
+
+              <!-- Ad -->
+              <div class="o-ad">
+                <img src="https://placeholdit.imgix.net/~text?txtsize=23&txt=This+is+an+Ad&w=90&h=728"  class="u-imgresponsive" alt="">
+              </div>
+              <!-- // end Ad -->
+
+            </aside>
+            <!-- // end Single Sidebar -->
+
+          </div>
+        </div>
+        <!-- // end About view -->
+
+      </section>
+
+      <!-- Desktop social feed -->
+      <aside class="o-feed" style="display:none;">
+
+        <!-- Feed content Desktop -->
+        <div class="o-feed__content o-feed__content--desktop">
+          <!-- Home actions -->
+          <ul class="o-actions u-listnostyle u-cf">
+            <li class="o-actions__item">
+              <a href="#" class="o-actions__link">
+                <i class="fa fa-file-o" aria-hidden="true"></i>
+                <span>Programa</span>
+              </a>
+            </li>
+            <li class="o-actions__item">
+              <a href="#" class="o-actions__link">
+                <i class="fa fa-play" aria-hidden="true"></i>
+                <span>Cinespot</span>
+              </a>
+            </li>
+          </ul>
+          <!-- // end Home actions -->
+
+          <!-- Facebook feed iframe -->
+          <div class="o-feed__widget o-feed__widget--facebook">
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fathenafilmfestival%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=1482592298709238" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+          </div>
+          <!-- // end Facebook feed iframe -->
+
+          <!-- Twitter feed iframe -->
+          <div class="o-feed__widget">
+            <a class="twitter-timeline" data-height="367" data-theme="light" href="https://twitter.com/Athenafilmfest">Tweets by Athenafilmfest</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+          <!-- // end Twitter feed iframe -->
+        </div>
+        <!-- // end Feed content Desktop -->
+
+        <!-- Feed content Mobile -->
+        <div class="o-feed__content o-feed__content--mobile">
+          <div class="o-social">
+            <header class="o-social__head">
+              <h4 class="o-social__title">Siguenos en nuestros canales de:</h4>
+            </header>
+            <a href="#" class="o-social__link">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="o-social__link">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <!-- // end Feed content Mobile -->
+
+      </aside>
+      <!-- // end Desktop social feed -->
+
+    </div>
+
+    <!-- Ad -->
+    <div class="o-ad">
+      <img src="https://placeholdit.imgix.net/~text?txtsize=23&txt=This+is+an+Ad&w=728&h=90"  class="u-imgresponsive" alt="">
+    </div>
+    <!-- // end Ad -->
+
   </main>
   <!-- // end Main container -->
 
@@ -151,6 +748,48 @@
   <footer class="o-footer"></footer>
   <!-- // Footer -->
 
+  <!-- Photoswip Markup -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+      <div class="pswp__ui pswp__ui--hidden">
+        <div class="pswp__top-bar">
+          <div class="pswp__counter"></div>
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+        </button>
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+        </button>
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- // end Photoswipe Markup -->
+
+  <!-- Libs scripts -->
+  <script src="bower_components/photoswipe/dist/photoswipe.js"></script>
+  <script src="bower_components/photoswipe/dist/photoswipe-ui-default.js"></script>
 
   <!-- custom scripts -->
   <script src="js/main.js"></script>
