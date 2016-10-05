@@ -35,6 +35,17 @@
       <li class="o-menu__item">
         <a href="#" class="o-menu__link">¿Quiénes somos?</a>
       </li>
+      <li class="o-menu__item o-menu__item--submenu" id="submenu">
+        <a href="#" class="o-menu__link">Ediciones anteriores</a>
+        <ul class="o-menu__sublist u-listnostyle">
+          <li class="o-menu__item">
+            <a href="#" class="o-menu__link">Edición 2013</a>
+          </li>
+          <li class="o-menu__item">
+            <a href="#" class="o-menu__link">Edición 2014</a>
+          </li>
+        </ul>
+      </li>
       <li class="o-menu__item">
         <a href="#" class="o-menu__link">Cartelera</a>
       </li>
@@ -78,14 +89,26 @@
         <div class="o-menu o-menu--desktop u-cf">
           <ul class="o-menu__col o-menu__col--left u-listnostyle">
             <li class="o-menu__item"></li>
-            <li class="o-menu__item"></li>
-            <li class="o-menu__item"></li>
-            <li class="o-menu__item"></li>
             <li class="o-menu__item o-menu__item--option">
               <a href="#" class="o-menu__link">
                 <span class="o-menu__label">¿Quiénes <br> somos?</span>
               </a>
             </li>
+            <li class="o-menu__item"></li>
+            <li class="o-menu__item o-menu__item--option">
+              <a href="javascript:void;" class="o-menu__link">
+                <span class="o-menu__label">Ediciones <br> Anteriores</span>
+              </a>
+              <ul class="o-menu__sub-menu u-listnostyle">
+                <li class="o-menu__sub-item">
+                  <a href="#" class="o-menu__sub-link">Edición <br> 2013</a>
+                </li>
+                <li class="o-menu__sub-item">
+                  <a href="#" class="o-menu__sub-link">Edición <br> 2014</a>
+                </li>
+              </ul>
+            </li>
+            <li class="o-menu__item"></li>
             <li class="o-menu__item o-menu__item--option">
               <a href="#" class="o-menu__link">
                 <span class="o-menu__label">Cartelera</span>
@@ -93,20 +116,32 @@
             </li>
           </ul>
           <ul class="o-menu__col o-menu__col--right u-listnostyle">
-            <li class="o-menu__item"></li>
+            <li class="o-menu__item o-menu__item--option">
+              <a href="#" class="o-menu__link">
+                <span class="o-menu__label">Programa</span>
+              </a>
+            </li>
             <li class="o-menu__item o-menu__item--option">
               <a href="#" class="o-menu__link">
                 <span class="o-menu__label">Patrocinadores</span>
               </a>
             </li>
+            <li class="o-menu__item o-menu__item--option">
+              <a href="#" class="o-menu__link">
+                <span class="o-menu__label">Prensa</span>
+              </a>
+            </li>
             <li class="o-menu__item"></li>
+            <li class="o-menu__item o-menu__item--option">
+              <a href="#" class="o-menu__link">
+                <span class="o-menu__label">Noticias</span>
+              </a>
+            </li>
             <li class="o-menu__item o-menu__item--option">
               <a href="#" class="o-menu__link">
                 <span class="o-menu__label">Galeria</span>
               </a>
             </li>
-            <li class="o-menu__item"></li>
-            <li class="o-menu__item"></li>
           </ul>
         </div>
         <!-- // end Menu Desktop -->
@@ -674,18 +709,51 @@
 
         <!-- Sponsors -->
         <div class="o-sponsors">
-          <div class="o-sponsors__logos">
-            <div class="o-sponsors__principal">
-              <a href="#" class="o-sponsors__item">
+
+          <!-- Principal sponsors -->
+          <div class="o-sponsors__group">
+            <div class="o-sponsors__logos o-sponsors__logos--principal u-cf">
+              <a href="#" class="o-sponsors__item" data-sponsor="cinepolis-f">
                 <h1 class="o-sponsors__title">Una iniciativa de:</h1>
-                <span class="o-sponsors__logo"></span>
+                <span class="o-sponsors__logo o-sponsors__logo--big o-sponsors__logo--cinepolis-f"></span>
               </a>
-              <a href="#" class="o-sponsors__item">
+              <a href="#" class="o-sponsors__item" data-sponsor="sala-arte">
                 <h1 class="o-sponsors__title">En colaboración con:</h1>
-                <span class="o-sponsors__logo"></span>
+                <span class="o-sponsors__logo o-sponsors__logo--big o-sponsors__logo--sala-arte"></span>
               </a>
             </div>
+            <div class="o-sponsors__info"></div>
           </div>
+          <!-- // end Principal sponsors -->
+
+          <!-- Social sponsors -->
+          <div class="o-sponsors__group">
+            <h1 class="o-sponsors__title">Aliados Sociales</h1>
+            <div class="o-sponsors__logos o-sponsors__logos--others u-cf">
+              <a href="#" class="o-sponsors__item" data-sponsor="ashoka">
+                <span class="o-sponsors__logo o-sponsors__logo--small o-sponsors__logo--ashoka"></span>
+              </a>
+              <a href="#" class="o-sponsors__item" data-sponsor="vena-cava">
+                <span class="o-sponsors__logo o-sponsors__logo--small o-sponsors__logo--vena-cava"></span>
+              </a>
+              <a href="#" class="o-sponsors__item" data-sponsor="entertaiment-ed">
+                <span class="o-sponsors__logo o-sponsors__logo--small o-sponsors__logo--entertaiment-ed"></span>
+              </a>
+              <a href="#" class="o-sponsors__item" data-sponsor="twitter-mx">
+                <span class="o-sponsors__logo o-sponsors__logo--small o-sponsors__logo--twitter-mx"></span>
+              </a>
+            </div>
+            <div class="o-sponsors__info"></div>
+          </div>
+          <!-- // end Social sponsors -->
+
+          <!-- Footer sponsors -->
+          <footer class="o-sponsors__footer">
+            <h1 class="o-sponsors__title">¿Te interesa ser Patrocinador de Mira Film Fest?</h1>
+            <p class="o-sponsors__text">Conoce las opciones que ofrecemos enviando un mail a Luis Felipe Rodríguez <br> <a href="mailto:mirafilmfest@cinepolis.com" class="o-sponsors__email">mirafilmfest@cinepolis.com</a></p>
+          </footer>
+          <!-- // end Footer sponsors -->
+
         </div>
         <!-- // end Sponsors -->
 
@@ -803,6 +871,15 @@
   <!-- Libs scripts -->
   <script src="bower_components/photoswipe/dist/photoswipe.js"></script>
   <script src="bower_components/photoswipe/dist/photoswipe-ui-default.js"></script>
+  <script src="bower_components/handlebars/handlebars.js"></script>
+
+  <script id="sponsor-template" type="text/x-handlebars-template">
+    <div class="o-sponsors__info-inner">
+      <h1 class="o-sponsors__title">{{title}}</h1>
+      <p class="o-sponsors__text">{{text}}</p>
+      <a href="{{link}}" target="_blank" class="o-grid__seemore">Ver más...</a>
+    </div>
+  </script>
 
   <!-- custom scripts -->
   <script src="js/main.js"></script>

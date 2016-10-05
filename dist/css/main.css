@@ -273,6 +273,18 @@ a:hover {
 .o-menu--mobile .o-menu__item:first-child .o-menu__link {
   text-transform: uppercase;
 }
+.o-menu--mobile .o-menu__item--submenu > .o-menu__link:after {
+  content: '\f107';
+  vertical-align: middle;
+  margin-left: 1em;
+  font-family: FontAwesome;
+}
+.o-menu--mobile .o-menu__item--submenu.js-active > .o-menu__link:after {
+  content: '\f106';
+}
+.o-menu--mobile .o-menu__item--submenu.js-active .o-menu__sublist {
+  height: 132px;
+}
 .o-menu--mobile .o-menu__link {
   display: block;
   padding: 1em 0 1em 2em;
@@ -316,6 +328,9 @@ a:hover {
 .o-menu--desktop .o-menu__item--option:hover .o-menu__link {
   display: table;
 }
+.o-menu--desktop .o-menu__item--option:hover .o-menu__sub-menu {
+  display: block;
+}
 .o-menu--desktop .o-menu__link {
   position: absolute;
   top: 0;
@@ -325,10 +340,68 @@ a:hover {
   width: 100%;
   height: 100%;
 }
+.o-menu--desktop .o-menu__sub-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.o-menu--desktop .o-menu__sub-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 90px;
+  display: table;
+  text-align: center;
+  background: url("../img/sprite-lights-2.png");
+  background-position: -200px -30px;
+  -webkit-animation: drawHover 0.2s steps(2) infinite;
+  -moz-animation: drawHover 0.2s steps(2) infinite;
+  -o-animation: drawHover 0.2s steps(2) infinite;
+  -ms-animation: drawHover 0.2s steps(2) infinite;
+  animation: drawHover 0.2s steps(2) infinite;
+}
+.o-menu--desktop .o-menu__sub-item:nth-child(1) {
+  -webkit-transform: translate(-60%, -60%);
+  -moz-transform: translate(-60%, -60%);
+  -o-transform: translate(-60%, -60%);
+  -ms-transform: translate(-60%, -60%);
+  transform: translate(-60%, -60%);
+}
+.o-menu--desktop .o-menu__sub-item:nth-child(2) {
+  -webkit-transform: translate(-100%, 20%);
+  -moz-transform: translate(-100%, 20%);
+  -o-transform: translate(-100%, 20%);
+  -ms-transform: translate(-100%, 20%);
+  transform: translate(-100%, 20%);
+}
+.o-menu--desktop .o-menu__sub-link {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+  color: #fff;
+  text-decoration: none;
+}
+.o-menu--desktop .o-menu__sub-link:hover {
+  text-decoration: none;
+}
 .o-menu__list {
   position: relative;
   z-index: 10;
   background-color: #0a0102;
+}
+.o-menu__sublist {
+  overflow: hidden;
+  height: 0;
+  background-color: #414141;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .o-menu__link {
   color: #fff;
@@ -1613,4 +1686,121 @@ a:hover {
   font-family: FontAwesome;
   font-size: 0.7em;
   color: #ee1011;
+}
+.o-sponsors {
+  text-align: center;
+  background-color: #f5f5f5;
+}
+.o-sponsors__logos {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.o-sponsors__logos--principal .o-sponsors__item {
+  width: 50%;
+  padding: 2em 1em;
+}
+.o-sponsors__item {
+  float: left;
+  border-right: 2px solid #f5f5f5;
+}
+.o-sponsors__item:last-child {
+  border: none;
+}
+.o-sponsors__title {
+  margin: 1em 0;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+.o-sponsors__logo {
+  display: inline-block;
+}
+.o-sponsors__logo--big {
+  width: 255px;
+  height: 90px;
+  background: url("../img/sprite-logos-principal.svg");
+}
+.o-sponsors__logo--big.o-sponsors__logo--cinepolis-f {
+  background-position: 0 0;
+}
+.o-sponsors__logo--big.o-sponsors__logo--sala-arte {
+  background-position: 255px 0;
+}
+.o-sponsors__logo--small {
+  width: 150px;
+  height: 150px;
+  background: url("../img/sprite-logos-aliados.svg");
+}
+.o-sponsors__logo--small.o-sponsors__logo--ashoka {
+  background-position: 0 0;
+}
+.o-sponsors__logo--small.o-sponsors__logo--vena-cava {
+  background-position: -150px 0;
+}
+.o-sponsors__logo--small.o-sponsors__logo--entertaiment-ed {
+  background-position: -300px 0;
+}
+.o-sponsors__logo--small.o-sponsors__logo--twitter-mx {
+  background-position: -450px 0;
+}
+.o-sponsors__info {
+  padding: 0 1em;
+  background-color: #c4c4c4;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.2s ease-in-out;
+  -moz-transition: height 0.2s ease-in-out;
+  -o-transition: height 0.2s ease-in-out;
+  -ms-transition: height 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out;
+}
+.o-sponsors__info.js-active {
+  height: 279px;
+}
+.o-sponsors__info-inner {
+  display: inline-block;
+  width: 100%;
+  padding: 2em 3em;
+  max-width: 900px;
+  text-align: left;
+}
+.o-sponsors__info .o-sponsors__title {
+  margin-top: 0;
+}
+.o-sponsors__text {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+.o-sponsors__footer {
+  padding: 2em 1em;
+  text-align: center;
+  background-color: #fff;
+}
+.o-sponsors__email {
+  font-weight: 700;
+  color: #0a0102;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.o-sponsors__email:hover {
+  color: #ee1011;
+}
+.o-sponsors .o-grid__seemore:before {
+  color: #0a0102;
+  border-color: #0a0102;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.o-sponsors .o-grid__seemore:hover {
+  color: #4e4e4e;
+}
+.o-sponsors .o-grid__seemore:hover:before {
+  color: #626262;
+  border-color: #626262;
 }

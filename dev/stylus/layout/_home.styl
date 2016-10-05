@@ -156,6 +156,26 @@
             text-transform uppercase
           }
         }
+        &--submenu {
+          > .o-menu__link {
+            &:after {
+              content '\f107'
+              vertical-align middle
+              margin-left 1em
+              font-family FontAwesome
+            }
+          }
+          &.js-active {
+            > .o-menu__link {
+              &:after {
+                content '\f106'
+              }
+            }
+            .o-menu__sublist {
+              height 132px
+            }
+          }
+        }
       }
       &__link {
         display block
@@ -187,6 +207,11 @@
             .o-menu__link {
               display table
             }
+            .o-menu__sub {
+              &-menu {
+                display block
+              }
+            }
           }
         }
       }
@@ -199,12 +224,56 @@
         width 100%
         height 100%
       }
+      &__sub {
+        &-menu {
+          position absolute
+          top 0
+          left 0
+          width 100%
+          height 100%
+          display none
+        }
+        &-item {
+          position absolute
+          top 0
+          left 0
+          width 100px
+          height 90px
+          display table
+          text-align center
+          background url('../img/sprite-lights-2.png')
+          background-position -200px -30px
+          animation drawHover .2s steps(2) infinite
+          &:nth-child(1) {
+            transform translate(-60%, -60%)
+          }
+          &:nth-child(2) {
+            transform translate(-100%, 20%)
+          }
+        }
+        &-link {
+          display table-cell
+          width 100%
+          vertical-align middle
+          color white
+          text-decoration none
+          &:hover {
+            text-decoration none
+          }
+        }
+      }
     }
   }
   &__list {
     position relative
     z-index 10
     background-color c_black
+  }
+  &__sublist {
+    overflow hidden
+    height 0
+    background-color c_black-alpha
+    transition all 0.2s ease-in-out
   }
   &__link {
     color white
